@@ -195,3 +195,4 @@ ON (ce.emp_no = de.emp_no)
 INNER JOIN departments as d
 ON (de.dept_no = d.dept_no)
 WHERE dept_name IN ('Sales', 'Development');
+
