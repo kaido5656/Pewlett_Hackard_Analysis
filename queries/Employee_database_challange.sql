@@ -222,14 +222,14 @@ ORDER BY rt.emp_no, rt.to_date DESC;
 
 select * from unique_titles
 
-SELECT COUNT(rt.emp_no), rt.title
+SELECT COUNT(ut.title), ut.title
 INTO retiring_titles
-FROM retirement_titles as rt
-GROUP BY rt.title
-ORDER BY count(rt.emp_no) DESC;
+FROM unique_titles as ut
+GROUP BY ut.title
+ORDER BY count(ut.title) DESC;
 
 select * from current_emp;
-
+select * from retiring_titles;
 
 SELECT DISTINCT ON (e.emp_no) e.emp_no, 
 	e.first_name, 
